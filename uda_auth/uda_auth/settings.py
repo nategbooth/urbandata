@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'uda_auth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'users',
+        'USER': 'django_user',
+        'PASSWORD': 'massiveeducatedbuffalo',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
