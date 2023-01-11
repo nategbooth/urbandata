@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 
-from models import Inmueble
-from routes import router
+from .models import Inmueble
+from .routes import router
 
 connection_string = "mongodb+srv://uda_prueba_usuario:eficaciacomunicacionentusiasmo@cluster0.shwu1ii.mongodb.net/?retryWrites=true&w=majority"
 db_name = "inmueble"
