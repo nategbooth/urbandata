@@ -1,0 +1,5 @@
+psycopg2
+Django
+djangorestframework
+djangorestframework_simplejwt
+pytest
