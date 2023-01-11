@@ -5,6 +5,7 @@ from typing import Optional
 
 class Inmueble(BaseModel):
     id: str = Field(default_factory=uuid.uuid4, alias="_id")
+    other_id: str
     build_status: int
     is_active: bool
     start_month: int
@@ -18,7 +19,6 @@ class Inmueble(BaseModel):
     x_coord: float
     y_coord: float
     boundary_id: int | None = None
-    id_uda: str
     title: str = ""
     listing_type: int
     date: str
