@@ -1,18 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from rest_framework import viewsets
-from .forms import CreateUserForm
-from .serializers import UserSerializer
-from .models import CustomAuthUser
+from rest_framework.response import  Response
+from rest_framework import status, viewsets
+from rest_framework.views import APIView
+
+from .serializers import RegistrationSerializer
 
 
-def create_user(request):
-    pass
+class RegistrationView(APIView):
+    def post(self, request):
+        serializer = RegistrationSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that shows all users.
-    """
-    queryset = CustomAuthUser.objects.all().order_by('-date_joined')
-    serializer_class = UserSerializer
