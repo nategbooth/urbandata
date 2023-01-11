@@ -5,7 +5,7 @@ from fastapi import APIRouter, Body, Request, Response, HTTPException, status, H
 from fastapi.encoders import jsonable_encoder
 from typing import List
 
-from .models import Inmueble
+from models import Inmueble
 
 secret_key = 'W0bkRHQVe8P[kF[Nx|11]R{|rWL"VxXgkafD:j;.2;Uw7yk>^6_12_J*`[Iik{+'
 

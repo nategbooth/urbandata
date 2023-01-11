@@ -2,7 +2,7 @@ import jwt
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
-from .main import inmuebles
+from main import inmuebles
 
 secret_key = 'W0bkRHQVe8P[kF[Nx|11]R{|rWL"VxXgkafD:j;.2;Uw7yk>^6_12_J*`[Iik{+'
 
